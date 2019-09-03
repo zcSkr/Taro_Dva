@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "at-button": "../../npm/taro-ui/dist/weapp/components/button/index"
+  },
+  "navigationBarTitleText": "首页",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "enablePullDownRefresh": false
+}

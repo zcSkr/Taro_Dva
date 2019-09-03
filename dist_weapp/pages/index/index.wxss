@@ -1,0 +1,8 @@
+/*  imported from index.less  */
+.index_page_1gHOq {
+  min-height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  font-size: 32rpx;
+}

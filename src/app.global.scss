@@ -1,0 +1,13 @@
+@import "~taro-ui/dist/style/index.scss";
+
+.page {
+  min-height: 100%;
+  box-sizing: border-box;
+  // background: red;
+}
+
+.taro-img,
+.taro-img img,
+.taro-img image {
+  display: block;
+}

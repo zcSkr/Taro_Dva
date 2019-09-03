@@ -1,0 +1,17 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.page}}">
+        <swiper style="{{anonymousState__temp}}" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
+            <swiper-item wx:key="$original.id" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                <image style="{{item.$loopState__temp3}}" mode="aspectFill" src="{{app.fileUrl + item.$original.img}}"></image>
+            </swiper-item>
+        </swiper>首页
+        <image src="{{img}}"></image>
+        <view class="page">456</view>
+        <rich-text nodes="{{richText}}" space="nbsp"></rich-text>
+        <button bindtap="handleButtonClick">点击更新富文本</button>taroUi测试
+        <at-button>按钮文案</at-button>
+        <at-button compid="{{$compid__0}}">按钮文案</at-button>
+        <at-button compid="{{$compid__1}}">按钮文案</at-button>
+        <at-button compid="{{$compid__2}}">按钮文案</at-button>
+    </view>
+</block>
