@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import service_home from '@/services/home';
+import * as service_home from '@/services/home';
 export default {
   namespace: 'home',
   state: {

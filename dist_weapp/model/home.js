@@ -12,7 +12,9 @@ var _index2 = _interopRequireDefault(_index);
 
 var _home = require("../services/home.js");
 
-var _home2 = _interopRequireDefault(_home);
+var service_home = _interopRequireWildcard(_home);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52,7 +54,7 @@ exports.default = {
               current = _ref3$pagination.current;
               pageSize = _ref3$pagination.pageSize;
               _context.next = 9;
-              return call(_home2.default.indexPage, _extends({ pageNum: 1, pageSize: pageSize }, payload));
+              return call(service_home.indexPage, _extends({ pageNum: 1, pageSize: pageSize }, payload));
 
             case 9:
               response = _context.sent;
@@ -102,7 +104,7 @@ exports.default = {
             case 0:
               service = payload.service, params = payload.params, data = payload.data;
               _context2.next = 3;
-              return call(_home2.default[service], params, data);
+              return call(service_home[service], params, data);
 
             case 3:
               response = _context2.sent;

@@ -34,7 +34,7 @@ const interceptor = function (chain) {
 Taro.addInterceptor(Taro.interceptors.timeoutInterceptor) //内置请求超时时抛出错误。
 
 export default function request({ url, params, data, method, success, complete }) {
-  
+
   if (url.substr(0, 4) != 'http')
     url = config.rootUrl + url
   url = url + '?' + urlEncode(params).slice(1)
