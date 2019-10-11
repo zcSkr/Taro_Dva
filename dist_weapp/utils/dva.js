@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = require("../npm/dva-core/index.js");
+var _index = require("../npm/dva-core/dist/index.js");
 
 var _index2 = require("../npm/dva-loading/dist/index.js");
 

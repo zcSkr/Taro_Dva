@@ -29,6 +29,5 @@
         "selectedIconPath": "./assets/images/index_focus.png"
       }
     ]
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
