@@ -52,6 +52,12 @@ var Mine = (_dec = (0, _index3.connect)(function (_ref) {
       navigationBarTextStyle: "black",
       navigationBarBackgroundColor: "#fff",
       enablePullDownRefresh: false
+    }, _this.handleCropper = function () {
+      var src = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571905395386&di=174289b59745239d4048d9118eab6989&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F6b0018f329217b50b48d9478776a24c9825cbef7cd86-IrED2R_fw658';
+      _this.$preload('src', src);
+      _index2.default.navigateTo({
+        url: '/pages/mine/cropper'
+      });
     }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -64,9 +70,7 @@ var Mine = (_dec = (0, _index3.connect)(function (_ref) {
     }
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {
-      // console.log(this)
-    }
+    value: function componentDidMount() {}
   }, {
     key: "onPullDownRefresh",
     value: function onPullDownRefresh() {
@@ -97,7 +101,7 @@ var Mine = (_dec = (0, _index3.connect)(function (_ref) {
   }]);
 
   return Mine;
-}(_index.Component), _class2.$$events = [], _class2.$$componentPath = "pages/mine/mine", _temp2)) || _class);
+}(_index.Component), _class2.$$events = ["handleCropper"], _class2.$$componentPath = "pages/mine/mine", _temp2)) || _class);
 exports.default = Mine;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Mine, true));

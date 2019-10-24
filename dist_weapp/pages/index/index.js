@@ -56,7 +56,7 @@ var Index = (_dec = (0, _index3.connect)(function (_ref) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref2, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray0", "$compid__0", "$compid__1", "$compid__2", "styles", "list", "app", "img", "richText", "dispatch", "home", "loading"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref2, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray12", "$compid__37", "$compid__38", "$compid__39", "styles", "list", "app", "img", "richText", "dispatch", "home", "loading"], _this.config = {
       navigationBarTitleText: '首页',
       navigationBarTextStyle: "black",
       navigationBarBackgroundColor: "#fff",
@@ -130,9 +130,9 @@ var Index = (_dec = (0, _index3.connect)(function (_ref) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__0 = (0, _index.genCompid)(__prefix + "$compid__0");
-      var $compid__1 = (0, _index.genCompid)(__prefix + "$compid__1");
-      var $compid__2 = (0, _index.genCompid)(__prefix + "$compid__2");
+      var $compid__37 = (0, _index.genCompid)(__prefix + "$compid__37");
+      var $compid__38 = (0, _index.genCompid)(__prefix + "$compid__38");
+      var $compid__39 = (0, _index.genCompid)(__prefix + "$compid__39");
 
       // console.log(process.env.TARO_ENV)
 
@@ -145,7 +145,7 @@ var Index = (_dec = (0, _index3.connect)(function (_ref) {
       var richText = this.__state.richText;
 
       var anonymousState__temp = (0, _index.internal_inline_style)({ height: '480rpx' });
-      var loopArray0 = list.map(function (item, _anonIdx) {
+      var loopArray12 = list.map(function (item, _anonIdx) {
         item = {
           $original: (0, _index.internal_get_original)(item)
         };
@@ -157,20 +157,20 @@ var Index = (_dec = (0, _index3.connect)(function (_ref) {
       });
       _index.propsManager.set({
         "type": "primary"
-      }, $compid__0);
+      }, $compid__37);
       _index.propsManager.set({
         "type": "secondary"
-      }, $compid__1);
+      }, $compid__38);
       _index.propsManager.set({
         "loading": true,
         "type": "primary"
-      }, $compid__2);
+      }, $compid__39);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray0: loopArray0,
-        $compid__0: $compid__0,
-        $compid__1: $compid__1,
-        $compid__2: $compid__2,
+        loopArray12: loopArray12,
+        $compid__37: $compid__37,
+        $compid__38: $compid__38,
+        $compid__39: $compid__39,
         styles: _indexLessMap2.default,
         list: list,
         app: _config2.default,

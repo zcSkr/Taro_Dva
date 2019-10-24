@@ -25,6 +25,7 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
+      'pages/mine/cropper',
       'pages/mine/mine'
     ],
     window: {
@@ -53,7 +54,22 @@ class App extends Component {
     }
   }
 
-  componentDidMount() { }
+  componentDidMount() {
+    console.log("程序启动");
+    const updateManager = Taro.getUpdateManager();
+    updateManager.onUpdateReady(() => {
+      Taro.showModal({
+        title: "更新提示",
+        content: "新版本已经准备好，是否重启应用？",
+        success: res => {
+          if (res.confirm) {
+            // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+            updateManager.applyUpdate();
+          }
+        }
+      });
+    });
+  }
 
   componentDidShow() { }
 

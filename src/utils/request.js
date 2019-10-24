@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro';
-import config from '@/config/config';
+import { rootUrl, getToken } from '@/config/config';
 
 // url转码
 function urlEncode(params, key, encode) {
@@ -36,7 +36,7 @@ Taro.addInterceptor(Taro.interceptors.timeoutInterceptor) //内置请求超时�
 export default function request({ url, params, data, method, success, complete }) {
 
   if (url.substr(0, 4) != 'http')
-    url = config.rootUrl + url
+    url = rootUrl + url
   url = url + '?' + urlEncode(params).slice(1)
 
   console.log(url, data)
@@ -47,7 +47,7 @@ export default function request({ url, params, data, method, success, complete }
     method: method ? method.toUpperCase() : 'GET',
     header: {
       'Content-Type': 'application/json',
-      'token': config.getToken() || '',
+      'token': getToken() || '',
     },
   }).then(result => {
     // console.log(result)

@@ -71,7 +71,7 @@ var _App = function (_BaseComponent) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ['pages/index/index', 'pages/mine/mine'],
+      pages: ['pages/index/index', 'pages/mine/cropper', 'pages/mine/mine'],
       window: {
         backgroundTextStyle: "light",
         navigationBarBackgroundColor: "#fff",
@@ -101,7 +101,22 @@ var _App = function (_BaseComponent) {
 
   _createClass(_App, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      console.log("程序启动");
+      var updateManager = _index2.default.getUpdateManager();
+      updateManager.onUpdateReady(function () {
+        _index2.default.showModal({
+          title: "更新提示",
+          content: "新版本已经准备好，是否重启应用？",
+          success: function success(res) {
+            if (res.confirm) {
+              // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+              updateManager.applyUpdate();
+            }
+          }
+        });
+      });
+    }
   }, {
     key: "componentDidShow",
     value: function componentDidShow() {}

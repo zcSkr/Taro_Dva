@@ -14,8 +14,6 @@ var _index2 = _interopRequireDefault(_index);
 
 var _config = require("../config/config.js");
 
-var _config2 = _interopRequireDefault(_config);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // url转码
@@ -61,7 +59,7 @@ function request(_ref) {
       complete = _ref.complete;
 
 
-  if (url.substr(0, 4) != 'http') url = _config2.default.rootUrl + url;
+  if (url.substr(0, 4) != 'http') url = _config.rootUrl + url;
   url = url + '?' + urlEncode(params).slice(1);
 
   console.log(url, data);
@@ -72,7 +70,7 @@ function request(_ref) {
     method: method ? method.toUpperCase() : 'GET',
     header: {
       'Content-Type': 'application/json',
-      'token': _config2.default.getToken() || ''
+      'token': (0, _config.getToken)() || ''
     }
   }).then(function (result) {
     // console.log(result)

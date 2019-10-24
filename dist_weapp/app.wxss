@@ -1091,17 +1091,29 @@
   .at-accordion__header--noborder::after {
     display: none; }
 
-.at-accordion__title {
+.at-accordion__info {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: left;
-  line-height: 1.6;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  white-space: nowrap; }
+  line-height: 1.6; }
+  .at-accordion__info__title {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+    font-size: inherit;
+    line-height: 1.5; }
+  .at-accordion__info__note {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 1.5; }
 
 .at-accordion__icon {
   margin-right: 15rpx;
@@ -2365,6 +2377,14 @@
 /**
  * 默认主题下 $color-border-light
  */
+.at-web-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
 .at-button {
   position: relative;
   display: -webkit-box;
@@ -6450,11 +6470,7 @@
     overflow: hidden;
     margin-right: 40rpx; }
   .at-list__item-extra {
-    -webkit-flex: 0 0 235rpx;
-        -ms-flex: 0 0 235rpx;
-            flex: 0 0 235rpx;
-    -webkit-box-flex: 0;
-    width: 235rpx;
+    max-width: 235rpx;
     text-align: right; }
   .at-list--no-border::after, .at-list--no-border::before {
     content: initial;
@@ -10639,7 +10655,7 @@
   display: flex;
   padding: 12rpx 0 6rpx;
   width: 100%;
-  min-height: #FFF;
+  min-height: 50rpx;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;

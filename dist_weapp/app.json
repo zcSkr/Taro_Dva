@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/mine/cropper",
     "pages/mine/mine"
   ],
   "window": {

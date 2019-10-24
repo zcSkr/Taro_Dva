@@ -1,9 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _index = require('../npm/@tarojs/taro-weapp/index.js');
 
 var _index2 = _interopRequireDefault(_index);
@@ -13,7 +9,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var requestUrl = 'https://wap.scttlg.com'; //https://wap.scttlg.com  http://47.107.65.90:8080  192.168.2.168:9001
 var projectName = 'supermarket';
 
-exports.default = {
+module.exports = {
   rootUrl: "https://wap.scttlg.com/supermarket",
   fileUrl: "https://wap.scttlg.com/supermarket/",
   uploadUrl: "https://wap.scttlg.com/supermarket/sys/file/uploadFile", // /app/commonApi/updateFile.app
