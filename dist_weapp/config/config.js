@@ -6,13 +6,13 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var requestUrl = 'https://wap.scttlg.com'; //https://wap.scttlg.com  http://47.107.65.90:8080  192.168.2.168:9001
-var projectName = 'supermarket';
+var requestUrl = 'http://192.168.2.86:8088'; //https://wap.scttlg.com  http://47.107.65.90:8080  192.168.2.168:9001
+var projectName = 'steak';
 
 module.exports = {
-  rootUrl: "https://wap.scttlg.com/supermarket",
-  fileUrl: "https://wap.scttlg.com/supermarket/",
-  uploadUrl: "https://wap.scttlg.com/supermarket/sys/file/uploadFile", // /app/commonApi/updateFile.app
+  rootUrl: "http://192.168.2.86:8088/steak",
+  fileUrl: "http://192.168.2.86:8088/steak/",
+  uploadUrl: "http://192.168.2.86:8088/steak/file/uploadFile",
   getToken: function getToken() {
     try {
       return _index2.default.getStorageSync('token');

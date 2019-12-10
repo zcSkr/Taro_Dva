@@ -1,9 +1,11 @@
-import sys from './sys'
+import global from './global'
 import home from './home'
-import mine from './/mine/mine'
+import mine from './mine/mine'
+import shop from './index/shop'
 
 export default [
-  sys,
+  global,
   home,
   mine,
+  shop
 ]

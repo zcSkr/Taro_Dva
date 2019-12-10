@@ -11920,8 +11920,8 @@
     .at-toast .toast-body.at-toast__body--custom-image, .at-toast .toast-body.at-toast__body--success, .at-toast .toast-body.at-toast__body--error, .at-toast .toast-body.at-toast__body--loading {
       padding-bottom: 17rpx; }
 
-.page {
-  min-height: 100%;
+Page {
+  min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
@@ -11929,3 +11929,20 @@
 .taro-img img,
 .taro-img image {
   display: block; }
+
+img,
+image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; }
+
+.at-rate .at-rate__icon--on,
+.at-rate .at-rate__icon--half .at-rate__left {
+  color: #F9994D; }
+
+.at-divider__content {
+  background: #f7f7f7; }
+
+.at-button {
+  border-radius: 0;
+  border: none; }

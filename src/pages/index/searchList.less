@@ -1,0 +1,138 @@
+.page {
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+// 搜索框
+.searchWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-top: 1PX solid #E9E9E9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  .searchInput {
+    width: 600px;
+    height: 60px;
+    background: rgba(244, 244, 244, 1);
+    border-radius: 30px;
+    font-size: 26px;
+    padding: 0 30px;
+  }
+
+  .cancelBtn {
+    color: #999999;
+    font-size: 26px;
+    min-width: 90px;
+    text-align: right;
+  }
+}
+
+// 底部分类的样式
+.scrollWrap {
+  display: flex;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 88px;
+  padding-bottom: 140px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+
+  .goodsItem {
+    display: flex;
+    // border-bottom: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    padding-bottom: 24px;
+    // margin-bottom: 24px;
+
+    .goodsImg {
+      min-width: 170px;
+      width: 170px;
+      height: 170px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #E4E4E4;
+    }
+
+    .goodsRightPanel {
+      width: 100%;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding-left: 20px;
+
+      .goodsName {
+        color: #222222;
+        font-size: 26px;
+        overflow: hidden; //超出文本隐藏
+        text-overflow: ellipsis; //溢出省略号显示
+        display: -webkit-box; //将对象作为弹性伸缩盒子
+        -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+        -webkit-line-clamp: 2;
+      }
+
+      .priceWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        min-height: 44px;
+
+        .price {
+          color: #FF6F1C;
+          font-size: 34px;
+          font-weight: bold;
+
+          .symbol {
+            font-size: 20px;
+          }
+        }
+
+        .originalPrice {
+          color: #CCCCCC;
+          font-size: 21.56px;
+          text-decoration: line-through;
+          margin-left: 20px;
+        }
+
+        .sales {
+          color: #999999;
+          font-size: 22px;
+        }
+      }
+
+      .operate {
+        min-width: 140px;
+        display: flex;
+        justify-content: flex-end;
+
+        .countNum {
+          min-width: 60px;
+          text-align: center;
+          color: #333333;
+          font-size: 30px;
+        }
+
+        .operateBtn {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .goodsItem:not(:nth-last-child(2)) {
+    border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 24px;
+  }
+}

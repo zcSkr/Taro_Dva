@@ -1,0 +1,304 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+  padding-bottom: 198px;
+}
+
+
+.addressWrap {
+  width: 100%;
+  border-top: 1PX solid #E9E9E9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  background: #fff;
+  margin-bottom: 16px;
+
+  .addIcon {
+    width: 208px;
+    height: 35px;
+  }
+
+  .addressInfo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+
+    .locationIcon {
+      width: 39px;
+      height: 47px;
+      min-width: 39px;
+      margin-right: 15px;
+    }
+
+    .header {
+      color: #333333;
+      font-size: 28px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .address {
+      color: #999999;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.goodsWrap {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-bottom: 16px;
+
+  .goodsItem {
+    display: flex;
+    border-bottom: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    .goodsImg {
+      min-width: 170px;
+      width: 170px;
+      height: 170px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #E4E4E4;
+
+    }
+
+    .goodsRightPanel {
+      width: 100%;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-sizing: border-box;
+      padding-left: 20px;
+
+      .goodsName {
+        color: #222222;
+        font-size: 26px;
+        overflow: hidden; //超出文本隐藏
+        text-overflow: ellipsis; //溢出省略号显示
+        display: -webkit-box; //将对象作为弹性伸缩盒子
+        -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+        -webkit-line-clamp: 2;
+      }
+
+      .spec {
+        color: #999999;
+        font-size: 24px;
+      }
+
+      .priceWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        min-height: 44px;
+
+        .price {
+          color: #333333;
+          font-size: 26px;
+
+          .symbol {
+            font-size: 26px;
+          }
+        }
+
+        .originalPrice {
+          color: #CCCCCC;
+          font-size: 21.56px;
+          text-decoration: line-through;
+        }
+      }
+
+      .sales {
+        color: #999999;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .subTotal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .subNum {
+      color: #666666;
+      font-size: 26px;
+      margin-right: 40px;
+    }
+
+    .total {
+      color: #666666;
+      font-size: 26px;
+
+      .symbol {
+        color: #36322F;
+        font-size: 24px;
+      }
+
+      .price {
+        color: #36322F;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.leaveMsg {
+  display: flex;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+  min-height: 150px;
+
+  .label {
+    color: #333333;
+    font-size: 28px;
+    min-width: 145px;
+  }
+
+  .textArea {
+    font-size: 28px;
+    color: #333333;
+  }
+}
+
+.orderFooter {
+  border-top: 1PX solid #E9E9E9;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+  min-height: 150px;
+  color: #999999;
+  font-size: 28px;
+  margin-bottom: 20px;
+
+  .timeView:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.operateWrap {
+  min-height: 98px;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  .totalMoney {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 98px;
+    padding: 0 30px;
+
+    .label {
+      color: #666666;
+      font-size: 28px;
+    }
+
+    .money {
+      .symbol {
+        color: #36322F;
+        font-size: 24px;
+      }
+
+      .price {
+        color: #36322F;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .operate {
+    background: #fff;
+    box-sizing: border-box;
+    border-top: 1PX solid #E9E9E9;
+    width: 100%;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+
+    .greyBtn,
+    .normalBtn,
+    .specialBtn {
+      width: 150px;
+      height: 54px;
+      border-radius: 27px;
+      font-size: 26px;
+      box-sizing: border-box;
+      border: 1PX solid transparent;
+      text-align: center;
+      line-height: 54px;
+      margin-left: 20px;
+    }
+
+    .greyBtn {
+      border-color: #999999;
+      color: #999999;
+    }
+
+    .normalBtn {
+      border-color: #F9994D;
+      color: #F9994D;
+    }
+
+    .specialBtn {
+      border-color: #F9994D;
+      background: #F9994D;
+      color: #FFF;
+    }
+  }
+}
+
+.statusWrap {
+  width: 100%;
+  min-height: 110px;
+  background: linear-gradient(0deg, rgba(255, 219, 200, 1) 0%, rgba(255, 235, 224, 1) 100%);
+  display: flex;
+  align-items: center;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  .statusIcon {
+    width: 34px;
+    min-width: 34px;
+    height: 37px;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .statusContent {
+    width: 100%;
+    margin-left: 17px;
+    .statusText {
+      color: #333333;
+      font-size: 30px;
+    }
+
+    .statusRemarks {
+      color: #666666;
+      font-size: 24px;
+      margin-top: 15px;
+    }
+  }
+}

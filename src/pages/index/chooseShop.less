@@ -1,0 +1,88 @@
+.page {
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-top: 1PX solid #E9E9E9;
+
+  :global {
+    .at-divider__content {
+      background: #fff;
+    }
+  }
+}
+
+.title {
+  color: #F9994D;
+  font-size: 26px;
+  padding: 30px 30px 0;
+}
+
+// 店铺信息
+.shopInfoMore:not(:nth-last-child(2)) {
+  .borderWrap {
+    border-bottom: 1PX solid #E9E9E9;
+  }
+}
+
+.shopInfo,
+.shopInfoMore {
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
+
+  .borderWrap {
+    // border-top: 1PX solid #E9E9E9;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+
+    .shopLogo {
+      box-sizing: border-box;
+      width: 140px;
+      height: 140px;
+      min-width: 140px;
+      border: 1PX solid rgba(233, 233, 233, 1);
+      border-radius: 8px;
+      background: #E9E9E9;
+    }
+
+    .shopBrief {
+      color: #666666;
+      font-size: 24px;
+      width: 100%;
+      max-width: 478px;
+      margin-left: 20px;
+
+      .shopName {
+        font-size: 32px;
+        color: #333333;
+      }
+
+      .shopAddress {
+        width: 100%;
+        margin: 15px 0;
+        overflow: hidden; //超出文本隐藏
+        white-space: nowrap; //溢出不换行
+        text-overflow: ellipsis; //溢出省略号显示
+      }
+    }
+
+    .distance {
+      color: #999999;
+      width: 50%;
+      font-size: 24px;
+      min-width: 86px;
+      text-align: right;
+      align-self: flex-start;
+    }
+  }
+}
+
+.stock {
+  width: 100%;
+  height: 16px;
+  background: #F7F7F7;
+}

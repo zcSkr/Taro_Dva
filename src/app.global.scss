@@ -1,13 +1,37 @@
 @import "~taro-ui/dist/style/index.scss";
 
-.page {
-  min-height: 100%;
+Page {
+  min-height: 100vh;
   box-sizing: border-box;
-  // background: red;
 }
 
 .taro-img,
 .taro-img img,
 .taro-img image {
   display: block;
+}
+
+img,
+image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+// 评分的样式
+.at-rate {
+
+  .at-rate__icon--on,
+  .at-rate__icon--half .at-rate__left {
+    color: #F9994D;
+  }
+}
+
+.at-divider__content {
+  background: #f7f7f7;
+}
+
+.at-button{
+  border-radius: 0;
+  border: none;
 }

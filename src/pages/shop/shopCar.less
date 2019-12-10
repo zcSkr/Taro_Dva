@@ -1,0 +1,163 @@
+.page {
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+}
+
+// 底部分类的样式
+.scrollWrap {
+  display: flex;
+  background-color: #F7F7F7;
+  border-top: 1PX solid #E9E9E9;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-bottom: 192px;
+  width: 100%;
+
+  .goodsItem {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 24px 30px;
+    background: #fff;
+
+    .radioWrap {
+      display: flex;
+      align-items: center;
+      height: 170px;
+
+      .radio {
+        margin-right: 10px;
+      }
+    }
+
+    .goodsImg {
+      min-width: 170px;
+      width: 170px;
+      height: 170px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #E4E4E4;
+    }
+
+    .goodsRightPanel {
+      width: 100%;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-sizing: border-box;
+      padding-left: 20px;
+
+      .goodsName {
+        color: #222222;
+        font-size: 24px;
+        overflow: hidden; //超出文本隐藏
+        text-overflow: ellipsis; //溢出省略号显示
+        display: -webkit-box; //将对象作为弹性伸缩盒子
+        -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+        -webkit-line-clamp: 2;
+      }
+
+      .spec {
+        color: #999999;
+        font-size: 24px;
+      }
+
+      .priceWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        min-height: 44px;
+
+        .price {
+          color: #FF6F1C;
+          font-size: 28x;
+          font-weight: bold;
+        }
+      }
+
+      .operate {
+        min-width: 140px;
+        display: flex;
+        justify-content: flex-end;
+
+        .countNum {
+          min-width: 60px;
+          text-align: center;
+          color: #333333;
+          font-size: 30px;
+        }
+
+        .operateBtn {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .goodsItem:not(:last-child) {
+    border-bottom: 1px solid #E4E4E4;
+  }
+}
+
+.operateWrap {
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 192px;
+
+  .operateHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    height: 90px;
+    color: #999999;
+    font-size: 28px;
+    font-weight: normal;
+  }
+
+  .operateFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-top: 1PX solid #E9E9E9;
+    padding: 0 30px;
+    height: 102px;
+
+    .radio {
+      color: #666666;
+      font-size: 24px;
+    }
+
+    .rightPanel {
+      display: flex;
+      align-items: center;
+
+      .total {
+        color: #444444;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .btn {
+        height: 80px;
+        border-radius: 40px;
+        line-height: 80px;
+        text-align: center;
+        background: #FFDBC8;
+        padding: 0 37px;
+        color: #333333;
+        font-size: 28px;
+        margin-left: 20px;
+        min-width: 160px;
+      }
+    }
+  }
+}

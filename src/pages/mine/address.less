@@ -1,0 +1,115 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+  border-top: 1PX solid #F7F7F7;
+  padding-bottom: 90px;
+}
+
+.addressWrap {
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  .addressItem {
+    display: flex;
+    box-sizing: border-box;
+    padding: 30px 0;
+
+    .locationIcon {
+      width: 32px;
+      height: 39px;
+      min-width: 32px;
+      margin-right: 23px;
+    }
+
+    .rightPanel {
+      width: 100%;
+      color: #B1B1B1;
+      font-size: 28px;
+
+      .label {
+        color: #4A4A4A;
+        font-size: 28px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .content {
+        display: flex;
+        margin: 25px 0;
+
+        .label {
+          min-width: 150px;
+        }
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 24px;
+
+        .radio {
+          transform: scale(0.7);
+          font-size: 34px;
+          margin-left: -30px;
+        }
+
+        .radioChecked {
+          transform: scale(0.7);
+          font-size: 34px;
+          margin-left: -30px;
+          color: #666666;
+        }
+
+        .operate {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .btnWrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            min-width: 120px;
+
+            .btnIcon {
+              width: 29px;
+              height: 26px;
+              margin-right: 5px;
+            }
+          }
+
+          .btnWrap:first-child {
+            border-right: 1PX solid #E9E9E9;
+          }
+        }
+      }
+    }
+  }
+
+  .addressItem:not(:last-child) {
+    border-bottom: 1PX solid #E9E9E9;
+  }
+}
+
+.submitBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  background: #F9994D;
+  color: #FEFEFE;
+  font-size: 30px;
+}

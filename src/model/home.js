@@ -3,31 +3,30 @@ import * as service_home from '@/services/home';
 export default {
   namespace: 'home',
   state: {
-    list: [],
-    pagination: {
-      current: 1,
-      pageSize: 10,
-      total: 0
-    },
+    carList: [],
+    goodsList: [],
+    shopBannerList: [],
+    shopGoodsTypeList: [],
+    shopInfo: {},
   },
   effects: {
-    * query({ payload, onSuccess }, { select, call, put }) {
-      Taro.showLoading({ title: '加载中...', mask: true });
-      let { pagination: { current, pageSize } } = yield select(state => state.home);
-      const response = yield call(service_home.indexPage, { pageNum: 1, pageSize: pageSize, ...payload });
+    *query({ payload, onSuccess }, { select, call, put }) {
+      yield Taro.showLoading({ title: '加载中...', mask: true });
+      const response = yield call(service_home.queryHome, {}, { ...payload });
       console.log(response)
       if (response) {
         yield put({
           type: 'save',
           payload: {
-            list: response.data.banner,
-            // pagination: {
-            //   current: response.data.pageNum,
-            //   pageSize: response.data.pageSize,
-            //   total: response.data.total,
-            // },
+            carList: response.data.carList,
+            goodsList: response.data.goodsList,
+            shopBannerList: response.data.shopBannerList,
+            shopGoodsTypeList: response.data.shopGoodsTypeList,
+            shopInfo: response.data.shopVO,
           },
         });
+        if (onSuccess) onSuccess(response)
+        yield Taro.setStorageSync('shopInfo', response.data.shopVO)
         yield Taro.hideLoading();
       }
     },

@@ -1,0 +1,222 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+
+  :global {
+    .at-modal__container {
+      width: 506px;
+      height: 540px;
+      border-radius: 30px;
+    }
+  }
+}
+
+
+.personWrap {
+  height: 264px;
+  background: linear-gradient(90deg, rgba(253, 135, 106, 1) 0%, rgba(255, 177, 121, 1) 100%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  .headImg {
+    width: 124px;
+    min-width: 124px;
+    height: 124px;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #f7f7f7;
+
+  }
+
+  .rightPanel {
+    margin-left: 30px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 36px;
+
+    .name {
+      color: #ffffff;
+      font-size: 36px;
+    }
+
+    .integral {
+      margin-top: 20px;
+      width: 170px;
+      padding: 0 20px;
+      text-align: center;
+      line-height: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, .3);
+      border-radius: 22px;
+      color: #ffffff;
+      font-size: 22px;
+    }
+  }
+
+  .loginBtn {
+    width: 140px;
+    min-width: 140px;
+    text-align: center;
+    line-height: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 22px;
+    color: #ffffff;
+    font-size: 22px;
+  }
+}
+
+.panelTitle {
+  color: #333333;
+  font-size: 28px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30px;
+  background: #fff;
+  border-bottom: 1PX solid #F7F7F7;
+}
+
+.panelOrder {
+  height: 164px;
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border;
+  justify-content: space-around;
+  padding-bottom: 33px;
+  margin-bottom: 20px;
+
+  .orderWrap {
+    text-align: center;
+    width: 100%;
+
+    .orderIcon {
+      position: relative;
+      overflow: visible;
+      margin-bottom: 20px;
+      display: inline-block;
+
+      .badge {
+        position: absolute;
+        right: -25px;
+        top: -20px;
+        color: #fff;
+        font-size: 20px;
+        min-width: 26px;
+        text-align: center;
+        background: #FF6F1C;
+        border-radius: 100%;
+        padding: 4px 6px;
+      }
+    }
+
+
+    .orderText {
+      width: #333333;
+      font-size: 24px;
+    }
+  }
+
+  .orderWrap:nth-child(1) .orderIcon {
+    width: 40px;
+    height: 40px
+  }
+
+  .orderWrap:nth-child(2) .orderIcon {
+    width: 40px;
+    height: 38px
+  }
+
+  .orderWrap:nth-child(3) .orderIcon {
+    width: 51px;
+    height: 37px
+  }
+
+  .orderWrap:nth-child(4) .orderIcon {
+    width: 45px;
+    height: 33px
+  }
+
+  .orderWrap:nth-child(5) .orderIcon {
+    width: 42px;
+    height: 45px
+  }
+}
+
+
+.panelListWrap {
+  background: #fff;
+
+  .panelList {
+    box-sizing: border-box;
+    padding: 0 30px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #232323;
+    font-size: 28px;
+  }
+
+  .panelList:not(:last-child) {
+    border-bottom: 1PX solid #F7F7F7;
+  }
+}
+
+
+.modalContent {
+  width: 506px;
+  height: 540px;
+  position: relative;
+
+  .authBg {
+    width: 506px;
+    height: 540px;
+  }
+
+  .submitBtn {
+    position: absolute;
+    left: calc(50% - 140px);
+    bottom: 100px;
+    width: 280px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 40px;
+    background: #F9994D;
+    color: #FFFFFF;
+    font-size: 26px;
+  }
+}
+
+.modalAction {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+
+  .confirmBtn,
+  .cancelBtn {
+    min-width: 160px;
+    width: 160px;
+    height: 80px;
+    background: rgba(255, 219, 200, 1);
+    border-color: rgba(255, 219, 200, 1);
+    border-radius: 40px;
+    color: #222222;
+    font-size: 34px;
+    text-align: center;
+    line-height: 80px;
+  }
+
+  .cancelBtn {
+    background: #eeeeee;
+    color: #666666;
+  }
+}

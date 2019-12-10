@@ -34,7 +34,6 @@ const interceptor = function (chain) {
 Taro.addInterceptor(Taro.interceptors.timeoutInterceptor) //内置请求超时时抛出错误。
 
 export default function request({ url, params, data, method, success, complete }) {
-
   if (url.substr(0, 4) != 'http')
     url = rootUrl + url
   url = url + '?' + urlEncode(params).slice(1)
@@ -48,10 +47,20 @@ export default function request({ url, params, data, method, success, complete }
     header: {
       'Content-Type': 'application/json',
       'token': getToken() || '',
+      'api-version': 1,
     },
-  }).then(result => {
-    // console.log(result)
-    if (result.statusCode == 401) {
+  }).then(res => {
+    if (res.statusCode == 200) {
+      return res.data
+    } else {
+      Taro.showModal({
+        content: res.data.error,
+        showCancel: false,
+        confirmText: '知道了'
+      })
+    }
+  }).catch(res => {
+    if (res.status == 401) {
       Taro.clearStorageSync();
       Taro.hideLoading()
       Taro.hideToast()
@@ -68,14 +77,6 @@ export default function request({ url, params, data, method, success, complete }
             console.log('用户点击取消')
           }
         }
-      })
-    } else if (result.statusCode == 200) {
-      return result.data
-    } else {
-      Taro.showModal({
-        content: data.errmsg,
-        showCancel: false,
-        confirmText: '知道了'
       })
     }
   });

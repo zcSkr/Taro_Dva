@@ -1,11 +1,11 @@
 import Taro from '@tarojs/taro';
-const requestUrl = 'https://wap.scttlg.com' //https://wap.scttlg.com  http://47.107.65.90:8080  192.168.2.168:9001
-const projectName = 'supermarket'
+const requestUrl = 'http://192.168.2.86:8088' //https://wap.scttlg.com  http://47.107.65.90:8080  192.168.2.168:9001
+const projectName = 'steak'
 
 module.exports = {
   rootUrl: requestUrl + '/' + projectName,
-  fileUrl: 'https://wap.scttlg.com' + '/' + projectName + '/',
-  uploadUrl: 'https://wap.scttlg.com' + '/' + projectName + '/sys/file/uploadFile',  // /app/commonApi/updateFile.app
+  fileUrl: requestUrl + '/' + projectName + '/',
+  uploadUrl: requestUrl + '/' + projectName + '/file/uploadFile',
   getToken: function () {
     try {
       return Taro.getStorageSync('token')

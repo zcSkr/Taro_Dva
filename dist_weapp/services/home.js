@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.indexPage = exports.getGoodsList = undefined;
+exports.queryShop = exports.queryHome = undefined;
 
-var getGoodsList = exports.getGoodsList = function () {
+var queryHome = exports.queryHome = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(params, data) {
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            return _context.abrupt('return', (0, _request2.default)({ url: '/goodsApi/findListApp', params: params, data: data, methods: 'POST' }));
+            return _context.abrupt('return', (0, _request2.default)({ url: '/homeApi/findHome', params: params, data: data, method: 'POST' }));
 
           case 1:
           case 'end':
@@ -21,18 +21,21 @@ var getGoodsList = exports.getGoodsList = function () {
     }, _callee, this);
   }));
 
-  return function getGoodsList(_x, _x2) {
+  return function queryHome(_x, _x2) {
     return _ref.apply(this, arguments);
   };
 }();
 
-var indexPage = exports.indexPage = function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(params, data) {
+// 查询商铺
+
+
+var queryShop = exports.queryShop = function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(params) {
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            return _context2.abrupt('return', (0, _request2.default)({ url: '/indexApi/getIndexPageData', params: params, data: data }));
+            return _context2.abrupt('return', (0, _request2.default)({ url: '/shopApi/findNearbyShopList', params: params }));
 
           case 1:
           case 'end':
@@ -42,7 +45,7 @@ var indexPage = exports.indexPage = function () {
     }, _callee2, this);
   }));
 
-  return function indexPage(_x3, _x4) {
+  return function queryShop(_x3) {
     return _ref2.apply(this, arguments);
   };
 }();

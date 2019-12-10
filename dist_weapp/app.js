@@ -56,8 +56,8 @@ if (_index5.ReduxContext.Provider) {
   });
 }
 
-var _App = function (_BaseComponent) {
-  _inherits(_App, _BaseComponent);
+var _App = function (_PureComponent) {
+  _inherits(_App, _PureComponent);
 
   function _App() {
     var _ref;
@@ -71,7 +71,12 @@ var _App = function (_BaseComponent) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ['pages/index/index', 'pages/mine/cropper', 'pages/mine/mine'],
+      pages: ['pages/mine/feedback', 'pages/index', 'pages/index/chooseShop', 'pages/index/commentList', 'pages/index/goodsInfo', 'pages/index/shopInfo', 'pages/index/searchList', 'pages/mine', 'pages/mine/business', 'pages/mine/addAddress', 'pages/mine/address', 'pages/mine/integral', 'pages/mine/person', 'pages/order', 'pages/order/applyReturn', 'pages/order/comment', 'pages/order/orderInfo', 'pages/shop', 'pages/shop/confirmOrder', 'pages/shop/shopCar', 'pages/shop/integralGoodsInfo', 'pages/richText'],
+      permission: {
+        "scope.userLocation": {
+          desc: "你的位置信息将用于小程序位置接口的效果展示"
+        }
+      },
       window: {
         backgroundTextStyle: "light",
         navigationBarBackgroundColor: "#fff",
@@ -80,20 +85,30 @@ var _App = function (_BaseComponent) {
         backgroundColor: "#3f3f3f"
       },
       tabBar: {
-        color: "#626567",
-        selectedColor: "#2A8CE5",
-        backgroundColor: "#FBFBFB",
+        color: "#999999",
+        selectedColor: "#333333",
+        backgroundColor: "#FFFFFF",
         borderStyle: "black",
         list: [{
-          pagePath: "pages/index/index",
+          pagePath: "pages/index",
           text: "首页",
-          iconPath: "./assets/images/index.png",
-          selectedIconPath: "./assets/images/index_focus.png"
+          iconPath: "./assets/tabbar/icon_home.png",
+          selectedIconPath: "./assets/tabbar/icon_home_selected.png"
         }, {
-          pagePath: "pages/mine/mine",
+          pagePath: "pages/shop",
+          text: "积分商城",
+          iconPath: "./assets/tabbar/icon_shop.png",
+          selectedIconPath: "./assets/tabbar/icon_shop_selected.png"
+        }, {
+          pagePath: "pages/order",
+          text: "订单",
+          iconPath: "./assets/tabbar/icon_order.png",
+          selectedIconPath: "./assets/tabbar/icon_order_selected.png"
+        }, {
+          pagePath: "pages/mine",
           text: "我的",
-          iconPath: "./assets/images/index.png",
-          selectedIconPath: "./assets/images/index_focus.png"
+          iconPath: "./assets/tabbar/icon_mine.png",
+          selectedIconPath: "./assets/tabbar/icon_mine_selected.png"
         }]
       }
     }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -136,7 +151,7 @@ var _App = function (_BaseComponent) {
   }]);
 
   return _App;
-}(_index.Component);
+}(_index.PureComponent);
 
 exports.default = _App;
 

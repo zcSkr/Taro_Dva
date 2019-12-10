@@ -1,0 +1,145 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #f7f7f7;
+}
+
+.bannerWrap {
+  background: #cccccc;
+  width: 100%;
+  min-height: 340px;
+
+  .banner {
+    width: 100%;
+  }
+}
+
+.integralWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  height: 150px;
+
+  .integralView {
+    width: 600px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 4px 7px 18px 0px rgba(255, 133, 79, 0.5);
+    border-radius: 44px;
+
+    .diamondIcon {
+      width: 37px;
+      height: 31px;
+      margin-right: 20px;
+    }
+
+    .integral {
+      color: #F9994D;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.goodsWrap {
+  padding: 30px 30px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .goodsItem {
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 330px;
+    width: 330px;
+    background: #fff;
+    margin-bottom: 30px;
+
+    .goodsImg {
+      width: 330px;
+      height: 260px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #E4E4E4;
+    }
+
+    .bottomPanel {
+      box-sizing: border-box;
+      padding: 20px;
+
+      .goodsName {
+        color: #222222;
+        font-size: 26px;
+        overflow: hidden; //超出文本隐藏
+        text-overflow: ellipsis; //溢出省略号显示
+        display: -webkit-box; //将对象作为弹性伸缩盒子
+        -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+        -webkit-line-clamp: 2;
+        min-height: 72px;
+      }
+
+      .priceWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        min-height: 44px;
+
+        .price {
+          color: #999999;
+          font-size: 22px;
+
+        }
+      }
+
+
+      .operate {
+        min-width: 140px;
+        display: flex;
+        justify-content: flex-end;
+
+        .countNum {
+          min-width: 60px;
+          text-align: center;
+          color: #333333;
+          font-size: 30px;
+        }
+
+        .operateBtn {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.shopCarIcon {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  overflow: visible;
+
+  .badge {
+    position: absolute;
+    right: -15px;
+    top: -10px;
+    color: #fff;
+    font-size: 20px;
+    min-width: 26px;
+    text-align: center;
+    background: #FF6F1C;
+    border-radius: 100%;
+    padding: 4px 6px;
+  }
+}

@@ -1,8 +1,10 @@
 import request from '@/utils/request'
 
-export async function getGoodsList(params, data) {
-  return request({ url: '/goodsApi/findListApp', params, data, methods: 'POST', })
+export async function queryHome(params, data) {
+  return request({ url: '/homeApi/findHome', params, data, method: 'POST', })
 }
-export async function indexPage(params,data) {
-  return request({ url: '/indexApi/getIndexPageData', params, data })
+
+// 查询商铺
+export async function queryShop(params) {
+  return request({ url: '/shopApi/findNearbyShopList', params })
 }

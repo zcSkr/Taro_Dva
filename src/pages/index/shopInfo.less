@@ -1,0 +1,157 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+}
+
+.swiper {
+  height: 440px;
+
+  .swiperItem {
+    box-sizing: border-box;
+    width: 100%;
+
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.shopWrap {
+  position: relative;
+  width: 690px;
+  background: #FFFFFF;
+  margin: -80px auto 0;
+  border-radius: 45px 45px 0px 0px;
+  box-sizing: border-box;
+  padding: 10px 30px 160px;
+
+  .shopInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 220px;
+    border-bottom: 1PX solid #E9E9E9;
+
+    .borderWrap {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      .shopLogo {
+        box-sizing: border-box;
+        width: 140px;
+        height: 140px;
+        min-width: 140px;
+        border: 1PX solid rgba(233, 233, 233, 1);
+        border-radius: 8px;
+        background: #E9E9E9;
+      }
+
+      .shopBrief {
+        color: #666666;
+        font-size: 24px;
+        width: 100%;
+        max-width: 478px;
+        margin-left: 20px;
+
+        .shopName {
+          font-size: 32px;
+          color: #333333;
+        }
+
+        .shopAddressWrap {
+          display: flex;
+          align-items: center;
+        }
+
+        .shopAddress {
+          width: 100%;
+          margin: 15px 0;
+          overflow: hidden; //超出文本隐藏
+          white-space: nowrap; //溢出不换行
+          text-overflow: ellipsis; //溢出省略号显示
+        }
+      }
+    }
+  }
+
+  .title {
+    color: #333333;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 40px 0;
+  }
+
+  .goodsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .goodsItem {
+      min-width: 300px;
+      width: 300px;
+      height: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #E4E4E4;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.serveBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+  width: 649px;
+  height: 119px;
+}
+
+.confirmView {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  background: #fff;
+
+  .modalContent {
+    text-align: center;
+    color: #333333;
+    font-size: 34px;
+    padding-top: 50px;
+  }
+
+
+  .modalAction {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0;
+
+    .confirmBtn,
+    .cancelBtn {
+      min-width: 160px;
+      width: 160px;
+      height: 80px;
+      background: rgba(255, 219, 200, 1);
+      border-color: rgba(255, 219, 200, 1);
+      border-radius: 40px;
+      color: #222222;
+      font-size: 34px;
+      text-align: center;
+      line-height: 80px;
+    }
+
+    .cancelBtn {
+      background: #eeeeee;
+      color: #666666;
+    }
+  }
+}

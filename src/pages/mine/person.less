@@ -1,0 +1,53 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+}
+
+.headImg {
+  width: 124px;
+  min-width: 124px;
+  height: 124px;
+  border-radius: 100%;
+  overflow: hidden;
+  background: #f7f7f7;
+
+}
+
+.panelListWrap {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  .panelList {
+    box-sizing: border-box;
+    padding: 20px 0;
+    min-height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #232323;
+    font-size: 28px;
+
+    .rightPanel {
+      display: flex;
+      align-items: center;
+
+      .text {
+        color: #111111;
+        font-size: 28px;
+      }
+
+      .nickName {
+        color: #111111;
+        font-size: 28px;
+        text-align: right;
+      }
+    }
+  }
+
+  .panelList:not(:last-child) {
+    border-bottom: 1PX solid #F7F7F7;
+  }
+}

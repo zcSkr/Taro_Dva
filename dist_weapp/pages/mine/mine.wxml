@@ -1,5 +1,0 @@
-<block wx:if="{{$taroCompReady}}">
-    <view>个人中心
-        <button bindtap="handleCropper">点击去裁剪头像</button>
-    </view>
-</block>

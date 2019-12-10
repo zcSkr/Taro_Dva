@@ -1,0 +1,70 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+  border-top: 1PX solid #F7F7F7;
+  padding-bottom: 90px;
+}
+
+.panelListWrap {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  .panelList {
+    box-sizing: border-box;
+    padding: 20px 0;
+    min-height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #232323;
+    font-size: 28px;
+
+    .rightPanel {
+      display: flex;
+      align-items: center;
+
+      .text {
+        color: #111111;
+        font-size: 28px;
+      }
+
+      .textGrey {
+        color: #777777;
+      }
+
+      .textInput {
+        color: #111111;
+        font-size: 28px;
+        text-align: right;
+        max-width: 450px;
+      }
+
+      .textArea {
+        color: #111111;
+        max-width: 450px;
+        font-size: 28px;
+        text-align: right;
+      }
+    }
+  }
+
+  .panelList:not(:last-child) {
+    border-bottom: 1PX solid #F7F7F7;
+  }
+}
+
+.submitBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  background: #F9994D;
+  color: #FEFEFE;
+  font-size: 30px;
+}

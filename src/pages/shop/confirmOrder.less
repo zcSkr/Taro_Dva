@@ -1,0 +1,283 @@
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background: #F7F7F7;
+  padding-bottom: 98px;
+}
+
+
+.addressWrap {
+  width: 100%;
+  border-top: 1PX solid #E9E9E9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  background: #fff;
+  margin-bottom: 16px;
+
+  .addIcon {
+    width: 208px;
+    height: 35px;
+  }
+
+  .addressInfo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+
+    .locationIcon {
+      width: 39px;
+      height: 47px;
+      min-width: 39px;
+      margin-right: 15px;
+    }
+
+    .header {
+      color: #333333;
+      font-size: 28px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .address {
+      color: #999999;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.goodsWrap {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-bottom: 16px;
+
+  .goodsItem {
+    display: flex;
+    border-bottom: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    .goodsImg {
+      min-width: 170px;
+      width: 170px;
+      height: 170px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #E4E4E4;
+
+    }
+
+    .goodsRightPanel {
+      width: 100%;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-sizing: border-box;
+      padding-left: 20px;
+
+      .goodsName {
+        color: #222222;
+        font-size: 26px;
+        overflow: hidden; //超出文本隐藏
+        text-overflow: ellipsis; //溢出省略号显示
+        display: -webkit-box; //将对象作为弹性伸缩盒子
+        -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+        -webkit-line-clamp: 2;
+      }
+
+      .spec {
+        color: #999999;
+        font-size: 24px;
+      }
+
+      .priceWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        min-height: 44px;
+
+        .price {
+          color: #333333;
+          font-size: 26px;
+
+          .symbol {
+            font-size: 26px;
+          }
+        }
+
+        .originalPrice {
+          color: #CCCCCC;
+          font-size: 21.56px;
+          text-decoration: line-through;
+        }
+      }
+
+      .sales {
+        color: #999999;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .subTotal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .subNum {
+      color: #666666;
+      font-size: 26px;
+      margin-right: 40px;
+    }
+
+    .total {
+      color: #666666;
+      font-size: 26px;
+
+      .symbol {
+        color: #36322F;
+        font-size: 24px;
+      }
+
+      .price {
+        color: #36322F;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.leaveMsg {
+  display: flex;
+  margin-bottom: 16px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+  min-height: 150px;
+
+  .label {
+    color: #333333;
+    font-size: 28px;
+    min-width: 145px;
+  }
+
+  .textArea {
+    font-size: 28px;
+    padding-top: 5px;
+  }
+}
+
+.subscribeTime {
+  display: flex;
+  margin-bottom: 16px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+  min-height: 84px;
+  color: #333333;
+  font-size: 28px;
+
+  .listItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .rightPanel {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.operate {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-top: 1PX solid #E9E9E9;
+  width: 100%;
+  height: 98px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+
+  .totalMoney {
+    width: 100%;
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 28px;
+    padding-left: 30px;
+
+    .price {
+      color: #FF6F1C;
+      font-size: 34px;
+    }
+
+    .symbol {
+      color: #FF6F1C;
+      font-size: 20px;
+    }
+  }
+
+  .submitBtn {
+    min-width: 180px;
+    height: 100%;
+    background: #F9994D;
+    color: #FFFFFF;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.successIcon {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto 0;
+}
+
+.modalContent {
+  text-align: center;
+  color: #333333;
+  font-size: 34px;
+  padding-top: 30px;
+}
+
+.modalAction {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+
+  .confirmBtn,
+  .cancelBtn {
+    min-width: 160px;
+    width: 160px;
+    height: 80px;
+    background: rgba(255, 219, 200, 1);
+    border-color: rgba(255, 219, 200, 1);
+    border-radius: 40px;
+    color: #222222;
+    font-size: 34px;
+    text-align: center;
+    line-height: 80px;
+  }
+
+  .cancelBtn {
+    background: #eeeeee;
+    color: #666666;
+  }
+}

@@ -58,7 +58,6 @@ function request(_ref) {
       success = _ref.success,
       complete = _ref.complete;
 
-
   if (url.substr(0, 4) != 'http') url = _config.rootUrl + url;
   url = url + '?' + urlEncode(params).slice(1);
 
@@ -70,11 +69,21 @@ function request(_ref) {
     method: method ? method.toUpperCase() : 'GET',
     header: {
       'Content-Type': 'application/json',
-      'token': (0, _config.getToken)() || ''
+      'token': (0, _config.getToken)() || '',
+      'api-version': 1
     }
-  }).then(function (result) {
-    // console.log(result)
-    if (result.statusCode == 401) {
+  }).then(function (res) {
+    if (res.statusCode == 200) {
+      return res.data;
+    } else {
+      _index2.default.showModal({
+        content: res.data.error,
+        showCancel: false,
+        confirmText: '知道了'
+      });
+    }
+  }).catch(function (res) {
+    if (res.status == 401) {
       _index2.default.clearStorageSync();
       _index2.default.hideLoading();
       _index2.default.hideToast();
@@ -91,14 +100,6 @@ function request(_ref) {
             console.log('用户点击取消');
           }
         }
-      });
-    } else if (result.statusCode == 200) {
-      return result.data;
-    } else {
-      _index2.default.showModal({
-        content: data.errmsg,
-        showCancel: false,
-        confirmText: '知道了'
       });
     }
   });

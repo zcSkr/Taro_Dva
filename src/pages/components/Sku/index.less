@@ -1,0 +1,226 @@
+.shopCarWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6);
+  z-index: 99;
+}
+
+.skuWrap {
+  position: fixed;
+  bottom: 98px;
+  left: 0;
+  box-shadow: 0px -6px 16px 0px rgba(255, 133, 79, 0.2);
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  background: #fff;
+  z-index: 99;
+  transition: all 2s;
+
+  .skuHeader {
+    color: #999999;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1PX solid #E9E9E9;
+    height: 160px;
+
+    .goodsImg {
+      min-width: 122px;
+      width: 122px;
+      height: 122px;
+      background: rgba(238, 238, 238, 1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .goodsRightPanel {
+      width: 100%;
+      height: 122px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding-left: 20px;
+
+      .goodsName {
+        color: #222222;
+        font-size: 26px;
+        overflow: hidden; //超出文本隐藏
+        text-overflow: ellipsis; //溢出省略号显示
+        display: -webkit-box; //将对象作为弹性伸缩盒子
+        -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+        -webkit-line-clamp: 2;
+      }
+
+      .priceWrap {
+        display: flex;
+        align-items: flex-end;
+
+        .price {
+          color: #FF6F1C;
+          font-size: 26px;
+          font-weight: bold;
+        }
+
+        .sales {
+          color: #999999;
+          font-size: 22px;
+          margin-left: 20px;
+        }
+      }
+
+
+    }
+  }
+
+  .skuListWrap {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+
+    .specItem {
+      .specName {
+        color: #323232;
+        font-size: 25.37px;
+        margin: 30px 0;
+      }
+
+      .tagWrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        .tag {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 160px;
+          height: 54px;
+          background: rgba(245, 245, 245, 1);
+          border-radius: 6px;
+          overflow: hidden; //超出文本隐藏
+          white-space: nowrap; //溢出不换行
+          text-overflow: ellipsis; //溢出省略号显示
+          color: #333333;
+          font-size: 23.55px;
+          margin-right: 30px;
+          margin-bottom: 30px;
+          box-sizing: border-box;
+          border: 1PX solid transparent;
+        }
+
+        .tag:nth-last-child(3),
+        .tag:nth-last-child(2),
+        .tag:nth-last-child(1) {
+          margin-bottom: 0px;
+        }
+
+        .selected {
+          color: #FF8E45;
+          background: #fff;
+          border-color: #FF8E45;
+        }
+      }
+    }
+  }
+
+  .skuFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 44px;
+    margin: 50px 0;
+
+    .label {
+      color: #323232;
+      font-size: 25.37px;
+    }
+
+    .operate {
+      min-width: 140px;
+      display: flex;
+      justify-content: flex-end;
+
+      .countNum {
+        min-width: 60px;
+        text-align: center;
+        color: #333333;
+        font-size: 30px;
+      }
+
+      .operateBtn {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.btnWrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98px;
+  display: flex;
+  z-index: 999;
+
+  .joinShopCar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFDBC8;
+    color: #222222;
+    font-size: 26px;
+  }
+
+  .exchange {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9994D;
+    color: #FFFEFE;
+    font-size: 26px;
+  }
+}
+
+.modalContent {
+  text-align: center;
+  color: #333333;
+  font-size: 34px;
+  padding-top: 50px;
+}
+
+.modalAction {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+
+  .confirmBtn,
+  .cancelBtn {
+    min-width: 160px;
+    width: 160px;
+    height: 80px;
+    background: rgba(255, 219, 200, 1);
+    border-color: rgba(255, 219, 200, 1);
+    border-radius: 40px;
+    color: #222222;
+    font-size: 34px;
+    text-align: center;
+    line-height: 80px;
+  }
+
+  .cancelBtn {
+    background: #eeeeee;
+    color: #666666;
+  }
+}

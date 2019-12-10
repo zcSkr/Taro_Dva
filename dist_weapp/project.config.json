@@ -1,15 +1,51 @@
 {
-	"projectname": "taro_dva_zc",
-	"description": "源晟科技",
-	"appid": "touristappid",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
 		"postcss": false,
-		"minified": false
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
+	"libVersion": "2.9.3",
+	"appid": "wxacdeac8ceb624a34",
+	"projectname": "miniprogram-1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
 }

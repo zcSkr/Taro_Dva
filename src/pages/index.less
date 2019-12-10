@@ -1,0 +1,263 @@
+.page {
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 140px;
+
+  :global {
+    .at-divider__content {
+      background: #fff;
+    }
+  }
+}
+
+.location {
+  color: #333333;
+  font-size: 32px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border-top: 1PX solid #E9E9E9;
+}
+
+.swiper {
+  height: 380px;
+  position: relative;
+  margin-bottom: 61px;
+
+  .swiperItem {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30px;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+}
+
+
+// 搜索框
+.searchWrap {
+  position: relative;
+  margin-top: -61px;
+
+
+  .searchBg {
+    width: 635px;
+    height: 122px;
+    margin: 0 auto;
+  }
+
+  .searchView {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 24px;
+    padding-left: 180px;
+    padding-right: 150px;
+
+    .searchInput {
+      height: 100%;
+      width: 100%;
+      margin-left: 20px;
+      font-size: 28px;
+    }
+  }
+}
+
+// 店铺信息
+.shopInfo {
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
+  height: 200px;
+
+  .borderWrap {
+    border-top: 1PX solid #E9E9E9;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .shopLogo {
+      box-sizing: border-box;
+      width: 140px;
+      height: 140px;
+      min-width: 140px;
+      border: 1PX solid rgba(233, 233, 233, 1);
+      border-radius: 8px;
+      background: #E9E9E9;
+    }
+
+    .shopBrief {
+      color: #666666;
+      font-size: 24px;
+      width: 100%;
+      max-width: 478px;
+      margin-left: 20px;
+
+      .shopName {
+        font-size: 32px;
+        color: #333333;
+      }
+
+      .shopAddress {
+        width: 100%;
+        margin: 15px 0;
+        overflow: hidden; //超出文本隐藏
+        white-space: nowrap; //溢出不换行
+        text-overflow: ellipsis; //溢出省略号显示
+      }
+    }
+  }
+}
+
+
+// 底部分类的样式
+.scrollWrap {
+  display: flex;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  .scrollView {
+    width: 160px;
+    height: 100%;
+  }
+
+  .scrollNav {
+    height: 100%;
+    width: 160px;
+    background-color: #F9F9F9;
+
+    .navItem {
+      width: 100%;
+      height: 120px;
+      font-size: 28px;
+      color: #666666;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .hotIcon {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+      }
+    }
+
+    .selected {
+      background: #fff;
+      color: #333333;
+      font-weight: bold;
+    }
+  }
+
+  .rightPanel {
+    width: 560px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    .goodsItem {
+      display: flex;
+      // border-bottom: 1px solid #E4E4E4;
+      box-sizing: border-box;
+      padding-bottom: 24px;
+      // margin-bottom: 24px;
+
+      .goodsImg {
+        min-width: 170px;
+        width: 170px;
+        height: 170px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #E4E4E4;
+      }
+
+      .goodsRightPanel {
+        width: 100%;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding-left: 20px;
+
+        .goodsName {
+          color: #222222;
+          font-size: 26px;
+          overflow: hidden; //超出文本隐藏
+          text-overflow: ellipsis; //溢出省略号显示
+          display: -webkit-box; //将对象作为弹性伸缩盒子
+          -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+          -webkit-line-clamp: 2;
+        }
+
+        .priceWrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          min-height: 44px;
+
+          .price {
+            color: #FF6F1C;
+            font-size: 34px;
+            font-weight: bold;
+
+            .symbol {
+              font-size: 20px;
+            }
+          }
+
+          .originalPrice {
+            color: #CCCCCC;
+            font-size: 21.56px;
+            text-decoration: line-through;
+          }
+        }
+
+        .operate {
+          min-width: 140px;
+          display: flex;
+          justify-content: flex-end;
+
+          .countNum {
+            min-width: 60px;
+            text-align: center;
+            color: #333333;
+            font-size: 30px;
+          }
+
+          .operateBtn {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+
+    .goodsItem:not(:nth-last-child(2)) {
+      border-bottom: 1px solid #E4E4E4;
+      margin-bottom: 24px;
+    }
+  }
+}
